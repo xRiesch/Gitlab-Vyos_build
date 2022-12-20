@@ -1,0 +1,3 @@
+include:
+  - '/gitlab-ci_lts.yml'
+#  - '/gitlab-ci_rolling.yml'
