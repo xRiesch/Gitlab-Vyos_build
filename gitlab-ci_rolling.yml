@@ -1,0 +1,11 @@
+build:
+  image: vyos/vyos-build:current
+  script:
+      - git clone -b current --single-branch https://github.com/vyos/vyos-build
+      - cd vyos-build
+      - ./build-vyos-image iso --architecture amd64 --build-by "your@email.here" --build-type release --version "1.4-rolling-$(date +"%d-%m-%Y")"
+  artifacts:
+    paths:
+      - vyos-build/build/*-amd64.iso
+    expire_in: 1 week
+
