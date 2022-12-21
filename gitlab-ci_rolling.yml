@@ -7,5 +7,4 @@ build:
   artifacts:
     paths:
       - vyos-build/build/*-amd64.iso
-    expire_in: 1 week
 
